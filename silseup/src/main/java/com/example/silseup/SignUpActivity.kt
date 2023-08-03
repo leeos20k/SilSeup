@@ -20,18 +20,18 @@ class SignUpActivity : AppCompatActivity() {
         val sharedPrefKey = "user_data"
         val sharedPref = getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
 
-        // TODO: 회원가입 기능 구현
+        // 회원가입 기능 구현
         // 회원가입을 위한 필요한 뷰 요소들과 기능들을 이곳에서 구현합니다.
 
         binding.btnSignUp.setOnClickListener {
-            val username = binding.editTextId.text.toString()
+            val id = binding.editTextId.text.toString()
             val password = binding.editTextPassword.text.toString()
             val email = binding.editTextEmail.text.toString()
             val phone = binding.editTextPhone.text.toString()
 
             // 입력한 데이터를 SharedPreferences에 저장
             with(sharedPref.edit()) {
-                putString("username", username)
+                putString("id", id)
                 putString("password", password)
                 putString("email", email)
                 putString("phone", phone)

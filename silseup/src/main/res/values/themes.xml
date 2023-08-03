@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- 액션바 사용하지 않겠다고 선언. 액션바 대신 툴바를 사용할것. -->
     <style name="Base.Theme.SilSeup" parent="Theme.Material3.DayNight.NoActionBar">
+
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>

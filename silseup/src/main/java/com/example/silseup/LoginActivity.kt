@@ -21,19 +21,19 @@ class LoginActivity : AppCompatActivity() {
         val sharedPrefKey = "user_data"
         val sharedPref = getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE)
 
-        // TODO: 로그인 기능 구현
+        // 로그인 기능 구현
         // 로그인을 위한 필요한 뷰 요소들과 기능들을 이곳에서 구현합니다.
 
         binding.btnLogin.setOnClickListener {
-            val username = binding.editTextUsername.text.toString()
+            val id = binding.editTextId.text.toString()
             val password = binding.editTextPassword.text.toString()
 
             // SharedPreferences에서 회원가입 데이터 가져오기
-            val savedUsername = sharedPref.getString("username", null)
+            val savedId = sharedPref.getString("id", null)
             val savedPassword = sharedPref.getString("password", null)
 
             // 입력한 아이디와 비밀번호가 회원가입 데이터와 일치하는지 확인
-            if (username == savedUsername && password == savedPassword) {
+            if (id == savedId && password == savedPassword) {
                 // 로그인 성공
                 Toast.makeText(this, "로그인 성공!", Toast.LENGTH_SHORT).show()
 
