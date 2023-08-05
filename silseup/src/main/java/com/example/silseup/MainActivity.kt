@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() { //AppCompatActivity를 상속하는 M
     private var isLoggedIn = false // // 로그인 상태를 저장하는 변수
 
 
-    private fun checkLoginStatus() {  //로그인 상태를 확인하여 드로어 레이아웃의 버튼 상태를 조정하는 함수
+    private fun checkLoginStatus() {  //로그인 상태를 확인하여 드로어 레이아웃의 버튼 상태를 조정하는 함수 rr
         val sharedPrefKey = "user_data" //user_data 라는 문자열을 변수에 지정
         val sharedPref = getSharedPreferences(sharedPrefKey, Context.MODE_PRIVATE) //쉐어드프리퍼런스에서 user_data의 값을 가져와서 sharedPref에 저장
         isLoggedIn = sharedPref.contains("id") && sharedPref.contains("password") //가져온 sharedPref에서 id와 password값을 저장
